@@ -1,0 +1,252 @@
+body {
+    background-image: url("/assets/siren-background.png");
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem; 
+}
+
+/* === MAIN CONTENT === */
+.home {
+    margin-top: 100px; 
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    display: flex;
+    width: 90%; 
+    max-width: 1200px;
+    gap: 30px; 
+    justify-content: space-between;
+}
+
+/* === BOXES === */
+.paper-box, .headlines-box {
+    background-color: #6e8ca0;
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
+    border: 4px solid #002643;
+    min-height: 700px;
+    min-width: 450px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.paper-header, .headline-header {
+    color: white;
+    letter-spacing: 0.1rem;
+    font-family: "Quicksand";
+}
+
+/* === PAPER SECTION === */
+.paper-box {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.paper-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.paper-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 0;
+    width: 100%;
+}
+
+.open-pdf-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F6B34C;
+    color: #002643;
+    border: none;
+    border-radius: 1000px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: "Quicksand";
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: auto;
+    z-index: 1;
+}
+
+.open-pdf-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    border-radius: 1000px;
+    background: #F6B34C;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.open-pdf-btn:hover::after {
+    transform: scale(1.1);
+}
+
+.headlines-box {
+    flex: 1.5;
+    padding: 20px 30px; 
+    box-sizing: border-box;
+}
+
+.paper-box h2, .headlines-box h2 {
+    font-size: 2.2rem; 
+    margin-top: 0;
+    margin-bottom: 15px; 
+}
+
+.headlines-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.headlines-box li {
+    padding: 8px 0;
+    font-size: 1.15rem; 
+}
+
+/* === PDF PREVIEW === */
+.pdf-preview {
+    flex: 1;
+    background: #5b7688;
+    border-radius: 10px;
+    position: relative;
+    padding: 15px;
+    padding-bottom: 9px;
+    min-height: 0; 
+}
+
+.pdf-preview iframe {
+    width: 100%;
+    height: 600px; 
+    border: none;
+    border-radius: 7px;
+}
+
+/* === LIGHTBOX === */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9); 
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    background: #002643;
+    border: 3px solid #F6B34C;
+    padding: 30px; 
+    border-radius: 15px; 
+    max-width: 85%; 
+    max-height: 90%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); 
+}
+
+.lightbox-content iframe {
+    width: 75vw; 
+    height: 80vh; 
+    border: none;
+    border-radius: 10px;
+}
+
+/* === CLOSE BUTTON === */
+.close-btn {
+    position: absolute;
+    top: 15px; 
+    right: 20px; 
+    background: #5b7688;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 28px; 
+    line-height: 1;
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #F6B34C;
+    color: #002643;
+}
+
+/* === MOBILE STYLES (Content Box Fixes) === */
+@media (max-width: 768px) {
+    .home {
+        margin-top: 80px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .paper-box, .headlines-box {
+        flex: none;
+        width: 100%;
+        min-height: auto; 
+        height: auto; 
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .paper-box {
+        padding-bottom: 15px;
+    }
+
+    .pdf-preview iframe {
+        height: 350px; 
+    }
+    
+    .paper-header {
+        flex-direction: column;
+    }
+
+    .open-pdf-btn {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        width: 50%;
+        padding: 8px 15px;
+    }
+    
+    .paper-box h2, .headlines-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .open-pdf-btn {
+        font-size: 1rem;
+        padding: 10px 14px;
+        width: 45%;
+        border-radius: 50px;
+        transform: scale(0.9);
+    }
+
+    .open-pdf-btn::after {
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Siren - Proudly AI Free!</title>
+    <link href="home.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script defer src="home.js"></script>
+    <script defer src="menu.js"></script>
+</head>
+<body>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
+
+    <nav class="navbar">
+        <a href="archives.html" class="nav-item">Archives</a>
+        <a href="activities.html" class="nav-item">Activities</a>
+        <a href="index.html" class="nav-item logo" id="defaultOpen">
+            <img src="assets/logo.png" alt="The Siren">
+        </a>
+        <a href="applications.html" class="nav-item">Applications</a>
+        <a href="team.html" class="nav-item">The Team</a>
+    </nav>
+
+    <div class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-item mobile-home-logo">
+            <img src="assets/logo.png" alt="Home">
+        </a>
+        <a href="archives.html" class="nav-item">Archives</a>
+        <a href="activities.html" class="nav-item">Activities</a>
+        <a href="applications.html" class="nav-item">Applications</a>
+        <a href="team.html" class="nav-item">The Team</a>
+    </div>
+
+    <section class="home" id="home">
+        <div class="content-container">
+            <div class="paper-box">
+                <div class="paper-header">
+                    <h2 class="paper-title">This Week's Paper</h2>
+                    <button id="open-pdf-btn" class="open-pdf-btn">Enlarge</button>
+                </div>
+                <div class="pdf-preview" id="pdf-preview">
+                    <iframe src="The Siren, Issue 0.pdf#toolbar=0" title="PDF Preview"></iframe>
+                </div>
+            </div>
+            <div class="headlines-box">
+                <div class="headline-header">
+                    <h2>Headlines</h2>
+                    <li>
+                        Lewis Hamilton - KING of Hype, Prince of Mediocrity!
+                    </li>
+
+                    <li>
+                        A Step Towards Dystopia: Albania hands power to a machine
+                    </li>
+
+                    <li>
+                        What it takes to be a leader - SRC Interview
+                    </li>
+
+                    <li>
+                        What IS "Cringe"?
+                    </li>
+
+                    <li>
+                        Blame the Red Sea for your internet buffering
+                    </li>
+                </div>
+
+                    
+            </div>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-btn" id="close-btn">×</button>
+                <iframe id="pdf-viewer" src="" title="Full PDF"></iframe>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
