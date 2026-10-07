@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <script defer src="menu.js"></script>
+        <script src="archives.js"></script>
     </head>
 
     <body>
@@ -33,5 +34,48 @@
             <a href="applications.html" class="nav-item">Applications</a>
             <a href="team.html" class="nav-item">The Team</a>
         </div>
+
+        <div class="archive-header" id="archive-header">
+            <h2>Previously released papers!</h2>
+            <p>When a new paper is out, it will be added here!</p>
+        </div>
+
+        <div class="grid-container" id="grid-container">
+
+            <!--COPY PASTE THE <button></button> TAGS IF YOU WANT TO ADD MORE ARCHIVES!!!-->
+
+            <button class="archive-button" data-pdf-url="/assets/The Siren, Issue 0.pdf" id="archive-button">
+                <h2>Issue #0</h2>
+                <p>Main headline: Lewis Hamilton: KING of hype, Prince of Mediocrity!</p>
+            </button>
+            
+            <button class="archive-button" data-pdf-url="/assets/The Siren, Issue 1.pdf" id="archive-button">
+                <h2>Issue #1</h2>
+                <p>Main headline: The Louvre: Heist of the Century</p>
+            </button>
+
+            <button class="archive-button" data-pdf-url="/assets/The Siren, Issue 2.pdf" id="archive-button">
+                <h2>Issue #2</h2>
+                <p>Main headline: How East Asia Has Become An “Idea”</p>
+            </button>
+            
+            <button class="archive-button" data-pdf-url="/assets/The Siren, Issue 3.pdf" id="archive-button">
+                <h2>Issue #3</h2>
+                    <p>Main headline: Bad Bunny's UNPRECEDENTED success!</p>
+            </button>
+            
+            <button class="archive-button" data-pdf-url="/assets/The Siren, Issue 4.pdf" id="archive-button">
+                <h2>Issue #4</h2>
+                <p>Main headline: India Turn Up The Heat</p>
+            </button>
+        </div>
+
+         <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-btn" id="close-btn">×</button>
+                <iframe id="pdf-viewer" src="" title="Full PDF"></iframe>
+            </div>
+        </div>
+
     </body>
 </html>

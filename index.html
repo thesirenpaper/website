@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script defer src="home.js"></script>
     <script defer src="menu.js"></script>
+    <script defer src="mobile-warning.js"></script>
 </head>
 <body>
     <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
@@ -42,34 +43,44 @@
                     <button id="open-pdf-btn" class="open-pdf-btn">Enlarge</button>
                 </div>
                 <div class="pdf-preview" id="pdf-preview">
-                    <iframe src="The Siren, Issue 0.pdf#toolbar=0" title="PDF Preview"></iframe>
+                    <iframe src="/assets/The Siren, Issue 4.pdf#toolbar=0" title="PDF Preview"></iframe>
                 </div>
             </div>
             <div class="headlines-box">
                 <div class="headline-header">
-                    <h2>Headlines</h2>
+					<h2>Headlines</h2>
                     <li>
-                        Lewis Hamilton - KING of Hype, Prince of Mediocrity!
+                        India turn up the heat - Aaron
                     </li>
 
                     <li>
-                        A Step Towards Dystopia: Albania hands power to a machine
+                        The magical foundation of modern day chemistry - Sara
                     </li>
 
                     <li>
-                        What it takes to be a leader - SRC Interview
+                        The return of the tradwife - Minna
                     </li>
 
                     <li>
-                        What IS "Cringe"?
+                        Orange Haze: The rise and fall of an unrestricted ego - Atharv
+                    </li>
+                    
+                    <li>
+                        Clavicular gets frame mogged: A deep dive into looksmaxxing communities - Reem
                     </li>
 
                     <li>
-                        Blame the Red Sea for your internet buffering
+                        From prodigy to precedent: Ilia Malinin, Alysa Liu and the weight of expectations - Minna
+                    </li>
+
+                    <li>
+                        Trillion dollar crash: Is the "AI bubble" popping? - Ayush
+                    </li>
+                    	
+                    <li>
+                        Overconsumption: An exceptionally dangerous problem - Aaliyah
                     </li>
                 </div>
-
-                    
             </div>
         </div>
 
@@ -80,5 +91,18 @@
             </div>
         </div>
     </section>
+
+    <div class="mobile-warning-modal" id="mobile-warning-modal">
+        <div class="modal-content">
+            <span class="modal-close-btn">&times;</span>
+            <h3 class="modal-title">Heads Up!</h3>
+            <p>
+                Are you viewing this site on a phone? This website was primarily designed for PC. 
+                Due to mobile browser limitations, the PDF embedded below may not be fully visible or easily scrollable, and some elements may appear out of place. 
+                For the best experience, please view this site on a desktop browser.
+            </p>
+            <button class="modal-accept-btn">I Understand</button>
+        </div>
+    </div>
 </body>
 </html>

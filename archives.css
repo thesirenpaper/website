@@ -1,7 +1,193 @@
 body {
-    background-image: url("/assets/siren-background-construction.png");
+    background-image: url("/assets/siren-background.png");
     font-family: 'Anton', sans-serif;
     margin: 0;
     padding: 0;
     font-size: 1.1rem; 
+}
+
+.archive-header {
+    text-align: center;
+    margin-top: 75px;
+    width: 100%;
+    color: #002643;
+}
+
+.archive-header h2 {
+    font-family: "Anton";
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin: 5px;
+}
+
+.archive-header p {
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 1.4rem;
+
+}
+
+.grid-container {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-auto-rows: 1fr; 
+    justify-content: center;
+    gap: 25px;
+}
+
+.grid-container button {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #002643;
+    border-color: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 3px solid #002643;
+    height: 100%;
+}
+
+.grid-container button h2 {
+    font-weight: 400;
+    font-family: "Anton";
+}
+
+.grid-container button p {
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.grid-container button:hover {
+    background-color: #e4e4e4;
+    position: relative;
+    
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.grid-container button:hover::after,  .grid-container button:hover::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, #F6B34C);
+    filter: blur(0.5rem);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 8px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+    padding: 8px;
+}
+
+.grid-container button:hover::before {
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to{
+        --angle: 360deg;
+    }
+}
+
+/* === LIGHTBOX === */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9); 
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-content {
+    position: relative;
+    background: #002643;
+    border: 3px solid #F6B34C;
+    padding: 30px; 
+    border-radius: 15px; 
+    max-width: 85%; 
+    max-height: 90%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); 
+}
+
+.lightbox-content iframe {
+    width: 75vw; 
+    height: 80vh; 
+    border: none;
+    border-radius: 10px;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 15px; 
+    right: 20px; 
+    background: #5b7688;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 28px; 
+    line-height: 1;
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #F6B34C;
+    color: #002643;
+}
+
+@media (max-width: 768px) {
+    .lightbox-content {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .close-btn {
+        top: 5px;
+        right: 10px;
+        font-size: 24px;
+        background: #5b7688; 
+        color: white; 
+        width: 35px;
+        height: 35px;
+    }
+    
+    #pdf-viewer {
+        margin-top: 0;
+        border-radius: 0;
+    }
 }

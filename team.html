@@ -8,7 +8,8 @@
         <link href="team.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-        <script defer src="menu.js"></script>
+        <script src="menu.js"></script>
+        <script src="team.js"></script>
     </head>
 
     <body>
@@ -32,6 +33,162 @@
             <a href="activities.html" class="nav-item">Activities</a>
             <a href="applications.html" class="nav-item">Applications</a>
             <a href="team.html" class="nav-item">The Team</a>
+        </div>
+
+        <div class="team-page-content">
+            <h1 class="page-title">Meet the team behind The Siren!</h1>
+            
+            <div class="team-masthead-container">
+
+                <!-- Member 1: Shevin - Editor In Chief -->
+                <div class="team-member">
+                    <button class="member-button" data-member-id="p1" aria-label="View Bio for Shevin">
+                        <img src="/assets/shevin-default.jpg" alt="Shevin" class="member-photo">
+                    </button>
+                    <div class="member-name">Shevin</div>
+                    <div class="member-role">Editor In Chief</div>
+                </div>
+
+
+                <!-- Member 2: Reem - Managing Editor -->
+                <div class="team-member">
+                    <button class="member-button" data-member-id="p2" aria-label="View Bio for Reem">
+                        <img src="/assets/reem-default.jpg" alt="Reem" class="member-photo">
+                    </button>
+                    <div class="member-name">Reem</div>
+                    <div class="member-role">Managing Editor</div>
+                </div>
+
+
+                <!-- Member 3: Winona - Design Lead -->
+                <div class="team-member">
+                    <button class="member-button" data-member-id="p3" aria-label="View Bio for Winona">
+                        <img src="/assets/winona-default.jpg" alt="Winona" class="member-photo">
+                    </button>
+                    <div class="member-name">Winona</div>
+                    <div class="member-role">Layout & Design Lead</div>
+                </div>
+
+
+                <!-- Member 4: Atharv - Senior IT Lead -->
+                <div class="team-member">
+                    <button class="member-button" data-member-id="p4" aria-label="View Bio for Atharv">
+                        <img src="/assets/atharv-default.jpg" alt="Atharv" class="member-photo">
+                    </button>
+                    <div class="member-name">Atharv</div>
+                    <div class="member-role">Senior IT Lead</div>
+                </div>
+                
+
+                <!-- Member 5: Constantino - Sports Columnist, Comic Writer & Illustrator -->
+                <div class="team-member">
+                    <button class="member-button" data-member-id="p5" aria-label="View Bio for Constantino">
+                        <img src="/assets/constantino-default.jpg" alt="Constantino" class="member-photo">
+                    </button>
+                    <div class="member-name">Constantino</div>
+                    <div class="member-role">Sports Columnist, Comic Writer & Illustrator</div>
+                </div>
+
+
+                <!-- Member 6: Ayush - Chief Technical Officer -->
+                <div class="team-member">
+                    <button class="member-button" data-member-id="p6" aria-label="View Bio for Ayush">
+                        <img src="/assets/ayush-default.jpg" alt="Ayush" class="member-photo">
+                    </button>
+                    <div class="member-name">Ayush</div>
+                    <div class="member-role">Chief Technical Officer</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-p1" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-p1-name">
+            <div class="modal-content">
+                <button class="modal-close-btn" data-member-id="p1" aria-label="Close">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-col">
+                        <img src="/assets/shevin-modal.jpg" alt="Shevin" class="modal-photo-large">
+                    </div>
+                    <div class="modal-info-col">
+                        <h2 id="modal-p1-name" class="modal-name">Shevin</h2>
+                        <p class="modal-bio">Hey, I'm Shevin, COO of Wadhwani Media Group. I'm the Founder and editor in chief of The Siren! I started The Siren to promote student-led journalism, to give students a creative outlet and to promote AI-free writing (and also because I really like Smallville).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-p2" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-p2-name">
+            <div class="modal-content">
+                <button class="modal-close-btn" data-member-id="p2" aria-label="Close">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-col">
+                        <img src="/assets/reem-modal.jpg" alt="Reem" class="modal-photo-large">
+                    </div>
+                    <div class="modal-info-col">
+                        <h2 id="modal-p2-name" class="modal-name">Reem</h2>
+                        <p class="modal-bio">Reem test.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-p3" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-p3-name">
+            <div class="modal-content">
+                <button class="modal-close-btn" data-member-id="p3" aria-label="Close">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-col">
+                        <img src="/assets/winona-modal.jpg" alt="Winona" class="modal-photo-large">
+                    </div>
+                    <div class="modal-info-col">
+                        <h2 id="modal-p3-name" class="modal-name">Winona</h2>
+                        <p class="modal-bio">Hello!! :D My name is Winona. Some of you may recognise me as a Media Director or simply through mutuals. I've always been passionate about Media and Arts, so stepping into the role of The Siren's Design Lead has really fueled that fire! Other than that, I love video games, horror, puzzles/ARGs, cosplaying, Dungeons and Dragons and so much more :3 !! I hope me and my team can bring justice to the articles The Siren is dying to share with all of you. Let our work be your inspiration ;3 - Winona, the starving artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-p4" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-p4-name">
+            <div class="modal-content">
+                <button class="modal-close-btn" data-member-id="p4" aria-label="Close">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-col">
+                        <img src="/assets/atharv-modal.jpg" alt="Atharv" class="modal-photo-large">
+                    </div>
+                    <div class="modal-info-col">
+                        <h2 id="modal-p4-name" class="modal-name">Atharv</h2>
+                        <p class="modal-bio">Hi! I'm Atharv. I hand-coded and designed the website you're looking at, and have written some of your favorite articles! I like to do photography, play the guitar (a lot), and my special interest is music (so you'll probably hear me go on and on about it if we ever have a conversation). I hope you enjoy reading The Siren as I have, and remember, kids, creativity fueled by AI is not creativity at all. -Your favorite website bio writer and CTO of Wadhwani Media Group, Atharv :P</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-p5" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-p5-name">
+            <div class="modal-content">
+                <button class="modal-close-btn" data-member-id="p5" aria-label="Close">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-col">
+                        <img src="/assets/constantino-modal.jpg" alt="Constantino" class="modal-photo-large">
+                    </div>
+                    <div class="modal-info-col">
+                        <h2 id="modal-p5-name" class="modal-name">Constantino</h2>
+                        <p class="modal-bio">Yeah, this is the Ahrister ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧ I really don't know what to say other than the fact that I draw. You've probably seen me in some of Winona's media works, walking around as a furry, or drawing on whiteboards... (ᵕ—ᴗ—) In any case, if you want to know more about me: I love most alt music (emo, goth, grunge, metal, prog, etc.), and... yeah. I hope to bring more life into The Siren through my inconsistent drawings. See ya (˶ˆᗜˆ˵)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-p6" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-p6-name">
+            <div class="modal-content">
+                <button class="modal-close-btn" data-member-id="p6" aria-label="Close">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image-col">
+                        <img src="/assets/ayush-modal.jpg" alt="Ayush" class="modal-photo-large">
+                    </div>
+                    <div class="modal-info-col">
+                        <h2 id="modal-p6-name" class="modal-name">Ayush</h2>
+                        <p class="modal-bio">Yoo, I’m Ayush Wadhwani, I’ve helped design this website. You’ve probably seen my name in the technology section for the articles. Tech has always been my passion, and from a very young age, I aspired to have a business one day. I’m also a very passionate designer, I’ve got good experience with UI/UX!! I have many interests/hobbies including photography, badminton, gaming, music and exploring new tech trends. I also love experimenting with my creative ideas, whether it’s deigning UI, learning something new about tech, or even capturing that perfect shot. I love meeting new people and connecting with them!!! I’m always looking to grow my skills and take on projects. I hope you enjoy everything our team has done for The Siren and feel free to talk to me anytime! - Ayush Wadhwani, CEO of Wadhwani Media Group.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

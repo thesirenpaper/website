@@ -2,7 +2,7 @@ const openPdfBtn = document.getElementById('open-pdf-btn')
 const lightbox = document.getElementById('lightbox')
 const pdfViewer = document.getElementById('pdf-viewer')
 const closeBtn = document.getElementById('close-btn')
-const pdfURL = "The Siren, Issue 0.pdf"
+const pdfURL = "/assets/The Siren, Issue 4.pdf"
 
 openPdfBtn.addEventListener('click', () => {
     pdfViewer.src = pdfURL
